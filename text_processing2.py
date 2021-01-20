@@ -29,7 +29,7 @@ def digits_to_words(input_string):
             'three one four one five'
     """
     code = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-    result = [code[int(x)] for i, x in enumerate(input_string) if x.isdigit()]
+    result = [code[int(x)] for x in input_string if x.isdigit()]
     return " ".join(result)
 
 
