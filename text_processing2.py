@@ -29,12 +29,8 @@ def digits_to_words(input_string):
             'three one four one five'
     """
     code = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-    digit_string = ""
-    for c in input_string:
-        if c.isdigit():
-            digit_string += code[int(c)]
-            digit_string += " "
-    return digit_string.strip()
+    result = [code[int(x)] for i, x in enumerate(input_string) if x.isdigit()]
+    return " ".join(result)
 
 
 """
